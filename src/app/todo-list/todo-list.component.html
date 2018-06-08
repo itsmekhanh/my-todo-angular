@@ -1,0 +1,11 @@
+<ul class="list-group row" style="margin-top: 20px">
+  <ng-container *ngFor="let todo of inputTodos">
+    <li *ngIf="!todo.completed" class="list-group-item">
+      <input type="checkbox" 
+             class="float-right"
+             (click)="markAsComplete(todo)"
+      >
+      <span>{{ todo.task }}</span>
+    </li>
+  </ng-container>
+</ul>
